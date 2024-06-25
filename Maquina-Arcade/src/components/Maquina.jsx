@@ -3,7 +3,7 @@ import './arcade.css'
 export const Maquina = () => {
   return (
     <article className="container">
-      <div className='maquina'>
+      <div className=''>
         <div className='monitor'>
           <div className='juego'>Juego</div>
         </div>
@@ -12,6 +12,7 @@ export const Maquina = () => {
           <div className='palanca'>palanca</div>
         </div>
       </div>
+      
     </article>
   )
 }

@@ -6,22 +6,76 @@ body {
     box-sizing: border-box;
     color: white;
 }
-.fondo-arcade {
+ul > li {
+    list-style: none;
+}
+.container {
     background-image: url(../public/img/arcade.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     position: fixed;
     z-index: -1;
 
     display: grid;
-    grid-template-areas: "titulo titulo titulo"
-                         "controles maquina informacion";
+    grid-template-areas: "header header header"
+                         ". titulo-fabuloso ."
+                         "controles maquina informacion"
+                         "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 70px 4fr 70px;
+    gap: 12px 8px;
+}
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px 1px #ffffff;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    width: 100vw;
+    height: 70px;
 
 }
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px 1px #ffffff;
+    border-top: 1px solid #ffffff;
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+
+}
+.contacto {
+    display: flex;
+    height: 70px;
+    width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.links > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
 .controles {
     grid-area: controles;
     display: flex;
@@ -41,13 +95,18 @@ body {
 .titulo-fabuloso {
     font-size: 2rem;
     text-align: center;
-    margin-top: 2rem;
     opacity: 0.9;
-    grid-area: titulo;
+    grid-area: titulo-fabuloso;
     font-family: cursive;
+    /* font-size: clamp(10px, 30px ,40px); */
+ 
+    
 } 
+
 .maquina {
    grid-area: maquina;
+   border: 1px solid #ffffff;
+    border-radius: 10px;
 }
 
 @keyframes fadeIn {
@@ -62,6 +121,7 @@ body {
     opacity: 1;
     animation: fadeIn 0.5s infinite alternate; 
 }
+
 .titulo-fabuloso > strong:first-child { color: #4513a1; text-shadow: 0 0 8px #4513a1; animation: fadeIn 0.7s infinite alternate;} /* el primero */
 .titulo-fabuloso > strong:nth-child(2) { color: #174c8a; text-shadow: 0 0 8px #174c8a; }
 .titulo-fabuloso > strong:nth-child(3) { color: #c31432; text-shadow: 0 0 8px #c31432; }
@@ -95,7 +155,7 @@ body {
 .titulo-fabuloso::after {
     content: '';
     display: block;
-    width: 550px;
+    width: 80vh;
     height: 3px;
     background: #780206;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
