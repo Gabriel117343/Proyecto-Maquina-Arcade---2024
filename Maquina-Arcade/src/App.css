@@ -44,10 +44,12 @@ body {
     margin-top: 2rem;
     opacity: 0.9;
     grid-area: titulo;
+    font-family: cursive;
 } 
 .maquina {
    grid-area: maquina;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -58,10 +60,9 @@ body {
 }
 .titulo-fabuloso:hover {
     opacity: 1;
-    animation: fadeIn 0.5s infinite alternate;
-    
+    animation: fadeIn 0.5s infinite alternate; 
 }
-.titulo-fabuloso > strong:first-child { color: #4513a1; text-shadow: 0 0 8px #4513a1; animation: fadeIn 0.5s infinite alternate;} /* el primero */
+.titulo-fabuloso > strong:first-child { color: #4513a1; text-shadow: 0 0 8px #4513a1; animation: fadeIn 0.7s infinite alternate;} /* el primero */
 .titulo-fabuloso > strong:nth-child(2) { color: #174c8a; text-shadow: 0 0 8px #174c8a; }
 .titulo-fabuloso > strong:nth-child(3) { color: #c31432; text-shadow: 0 0 8px #c31432; }
 .titulo-fabuloso > strong:nth-child(4) { color: #f57170; text-shadow: 0 0 8px #f57170; }
