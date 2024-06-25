@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    color: white;
+}
+.fondo-arcade {
+    background-image: url(../public/img/arcade.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+
+    display: grid;
+    grid-template-areas: "titulo titulo titulo"
+                         "controles maquina informacion";
+
+}
+.controles {
+    grid-area: controles;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.informacion {
+    grid-area: informacion;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.titulo-fabuloso {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0.9;
+    grid-area: titulo;
+} 
+.maquina {
+   grid-area: maquina;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.titulo-fabuloso:hover {
+    opacity: 1;
+    animation: fadeIn 0.5s infinite alternate;
+    
+}
+.titulo-fabuloso > strong:first-child { color: #4513a1; text-shadow: 0 0 8px #4513a1; animation: fadeIn 0.5s infinite alternate;} /* el primero */
+.titulo-fabuloso > strong:nth-child(2) { color: #174c8a; text-shadow: 0 0 8px #174c8a; }
+.titulo-fabuloso > strong:nth-child(3) { color: #c31432; text-shadow: 0 0 8px #c31432; }
+.titulo-fabuloso > strong:nth-child(4) { color: #f57170; text-shadow: 0 0 8px #f57170; }
+.titulo-fabuloso > strong:nth-child(5) { color: #ff8e53; text-shadow: 0 0 8px #ff8e53; }
+.titulo-fabuloso > strong:nth-child(6) { color: #ffc837; text-shadow: 0 0 8px #ffc837; }
+.titulo-fabuloso > strong:nth-child(7) { color: #a8e063; text-shadow: 0 0 8px #a8e063; }
+.titulo-fabuloso > strong:nth-child(8) { color: #57d9a3; text-shadow: 0 0 8px #57d9a3; }
+.titulo-fabuloso > strong:nth-child(9) { color: #45aaf2; text-shadow: 0 0 8px #45aaf2; }
+.titulo-fabuloso > strong:nth-child(10) { color: #5b2a86; text-shadow: 0 0 8px #5b2a86; }
+.titulo-fabuloso > strong:nth-child(11) { color: #fc5c65; text-shadow: 0 0 8px #fc5c65; }
+.titulo-fabuloso > strong:nth-child(12) { color: #26de81; text-shadow: 0 0 8px #26de81; }
+.titulo-fabuloso > strong:nth-child(13) { color: #2bcbba; text-shadow: 0 0 8px #2bcbba; }
+.titulo-fabuloso > strong:nth-child(14) { color: #eb3b5a; text-shadow: 0 0 8px #eb3b5a; }
+.titulo-fabuloso > strong:nth-child(15) { color: #fa8231; text-shadow: 0 0 8px #fa8231; }
+.titulo-fabuloso > strong:nth-child(16) { color: #f7b731; text-shadow: 0 0 8px #f7b731; }
+.titulo-fabuloso > strong:nth-child(17) { color: #20bf6b; text-shadow: 0 0 8px #20bf6b; }
+.titulo-fabuloso > strong:nth-child(18) { color: #0fb9b1; text-shadow: 0 0 8px #0fb9b1; }
+.titulo-fabuloso > strong:nth-child(19) { color: #2d98da; text-shadow: 0 0 8px #2d98da; }
+.titulo-fabuloso > strong:nth-child(20) { color: #3867d6; text-shadow: 0 0 8px #3867d6; }
+.titulo-fabuloso > strong:nth-child(21) { color: #8854d0; text-shadow: 0 0 8px #8854d0; }
+.titulo-fabuloso > strong:nth-child(22) { color: #a5b1c2; text-shadow: 0 0 8px #a5b1c2; }
+.titulo-fabuloso > strong:nth-child(23) { color: #f83e86; text-shadow: 0 0 8px #f83e86; }
+.titulo-fabuloso > strong:nth-child(24) { color: #4b6584; text-shadow: 0 0 8px #4b6584; }
+.titulo-fabuloso > strong:nth-child(25) { color: #4b6584; text-shadow: 0 0 8px #4b6584; }
+.titulo-fabuloso > strong:nth-child(26) { color: #ec6d4e; text-shadow: 0 0 8px #ec6d4e; }
+.titulo-fabuloso > strong:nth-child(27) { color: #4b6584; text-shadow: 0 0 8px #4b6584; }
+.titulo-fabuloso > strong:nth-child(28) { color: #fcb059; text-shadow: 0 0 8px #fcb059; }
+.titulo-fabuloso > strong:last-child { color: #4b6584; text-shadow: 0 0 8px #4b6584; animation: fadeIn 0.7s infinite alternate;} /* el ultimo */
+
+.titulo-fabuloso::after {
+    content: '';
+    display: block;
+    width: 550px;
+    height: 3px;
+    background: #780206;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 5px 1px #ffffff;
+    margin: 0.5rem auto;
+    opacity: 0.8;
+}
